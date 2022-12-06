@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 import Expenses from "./components/Expenses/Expenses";
+import NewExpense from "./components/NewExpense/NewExpense";
 
 const App = () => {
   const expenses = [
@@ -36,9 +37,14 @@ const App = () => {
   //   React.createElement(Expenses, {expenses: expenses})
   // );
 
+  const addExpenseHandler = (expense) => {
+    console.log(expense);
+  };
+
   return (
     <div className="App">
       {/* reacts detects custom components when they start with uppercase. When they start with lowercase for react it means a inbuild elements */}
+      <NewExpense onAddExpense={addExpenseHandler} />
       <Expenses expenses={expenses} />
     </div>
   );
