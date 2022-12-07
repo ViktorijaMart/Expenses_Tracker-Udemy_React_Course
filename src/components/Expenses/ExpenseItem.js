@@ -20,15 +20,17 @@ const ExpenseItem = ({ title, amount, date }) => {
   }
 
   return (
-    <Card className="expense-item">
-      <ExpenseDate date={date} />
-      <div className="expense-item__description">
-        <h2>{title}</h2>
-        <div className="expense-item__price">{amount} &euro;</div>
-      </div>
-      {/* in the event we put function name without brackets!!! Overwise function will be executed immediately when this return code is read by the browser */}
-      {/* <button onClick={clickHandler}>Change Title</button> */}
-    </Card>
+    <li>
+      <Card className="expense-item">
+        <ExpenseDate date={date} />
+        <div className="expense-item__description">
+          <h2>{title}</h2>
+          <div className="expense-item__price">{amount} &euro;</div>
+        </div>
+        {/* in the event we put function name without brackets!!! Overwise function will be executed immediately when this return code is read by the browser */}
+        {/* <button onClick={clickHandler}>Change Title</button> */}
+      </Card>
+    </li>
   );
 };
 
